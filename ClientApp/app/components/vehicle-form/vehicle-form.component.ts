@@ -107,7 +107,7 @@ export class VehicleFormComponent implements OnInit {
         timeout: 5000
       });
     });
-    this.router.navigate(['/vehicles/', this.vehicle.id]);
+    //this.router.navigate(['/vehicles/', this.vehicle.id]);
   } 
 
 }

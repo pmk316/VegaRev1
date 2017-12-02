@@ -19,9 +19,7 @@ export class PaginationComponent implements OnChanges {
     var pagesCount = Math.ceil(this.totalItems/this.pageSize);
     this.pages = [];
     for(var i=1; i<=pagesCount; i++)
-      this.pages.push(i);
-    
-      console.log(this);
+      this.pages.push(i);    
   }
 
   changePage(page : any) {
@@ -35,7 +33,6 @@ export class PaginationComponent implements OnChanges {
     
     this.currentPage--;
     this.pageChanged.emit(this.currentPage);
-    console.log("previous", this);
   }
 
   next() {
@@ -44,7 +41,6 @@ export class PaginationComponent implements OnChanges {
     
     this.currentPage++;
     this.pageChanged.emit(this.currentPage);
-    console.log("next", this);
   }
 
   constructor() { }

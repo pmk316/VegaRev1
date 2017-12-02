@@ -23,9 +23,11 @@ export class AppErrorHandler implements ErrorHandler {
             });
         }
 
-        if (!isDevMode())
+        if (!isDevMode()) {
             Raven.captureException(error.originalError || error);
-        else 
+            console.log(error.originalError || error);
+        } else {
             throw error;        
+        }
     }
 }
